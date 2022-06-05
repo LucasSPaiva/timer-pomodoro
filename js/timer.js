@@ -23,9 +23,9 @@ export function Timer({ minutesDisplay, secondsDisplay, resetControls }) {
 
 			updateDisplay(minutes, 0)
 			if (isFinished) {
+				Sounds().timeEnd()
 				resetControls()
 				updateDisplay()
-				Sounds().timeEnd
 				return
 			}
 
