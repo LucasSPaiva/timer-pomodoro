@@ -1,0 +1,74 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*::selection {
+	color: none;
+	background: transparent;
+}
+
+:root {
+	font-size: 62.5%;
+
+	--hue: 2;
+	--base-color: hsl(var(--hue), 64%, 58%);
+	--base-color-light: hsla(var(--hue), 0%, 100%, 0.1);
+}
+
+body {
+	background-color: var(--base-color);
+}
+
+button {
+	background-color: transparent;
+	border: none;
+
+	cursor: pointer;
+}
+
+main {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.6rem;
+
+	cursor: default;
+}
+
+main .timer span {
+	font-family: 'Baloo 2', sans-serif;
+
+	font-weight: 600;
+
+	font-size: 12rem;
+	line-height: 10rem;
+
+	color: white;
+}
+
+main .controller {
+	padding: 2rem 4rem;
+
+	background: var(--base-color-light);
+	border-radius: 6rem;
+
+	display: flex;
+	gap: 3.2rem;
+}
+
+footer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.hide {
+	display: none;
+}
